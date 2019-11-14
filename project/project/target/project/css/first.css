@@ -1,0 +1,18 @@
+div {
+    border: 1px solid #000000; /* Параметры рамки */
+    padding: 20px; /* Поля вокруг текста */
+    margin-bottom: 1px; /* Отступ снизу */
+}
+
+#center {
+    text-align: center;
+}
+
+.content {
+    width: 95%; /* Ширина слоя */
+    background: mediumslateblue; /* Цвет фона */
+}
+
+form {
+    display: inline;
+}

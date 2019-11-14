@@ -1,0 +1,9 @@
+.label,
+label{
+    background: #ffffff;
+}
+
+.text,
+input[type="checkbox"] {
+    display: none;
+}
