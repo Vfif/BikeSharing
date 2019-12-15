@@ -3,15 +3,30 @@ package com.epam.project.validation;
 import java.util.regex.Pattern;
 
 public class RegistrationValidation {
-    private static final String PASSWORD_REG = "^(?=.*[A-ZА-Я])(?=.*[a-zа-я])(?=.*\\d)[A-Za-z\\d]{8,}$";
+    private static final String LOGIN_REG = "[A-Za-zА-Яа-я\\d]{1,45}";
+    private static final String PASSWORD_REG = "^(?=.*[A-ZА-Я])(?=.*[a-zа-я])(?=.*\\d)[A-Za-zА-Яа-я\\d]{8,45}$";
     private static final String EMAIL_REG = "^\\w{6,}@\\w+\\.\\p{Lower}{2,4}$";
+    private static RegistrationValidation instance;
 
-    public static boolean isCorrectPassword(String password){
-        return Pattern.matches(PASSWORD_REG, password);
-        //at least one letter uppercase and one lowercase and one digit
+    private RegistrationValidation() {
     }
 
-    public static boolean isCorrectEmail(String email) {
-        return Pattern.matches(EMAIL_REG, email);
+    public static RegistrationValidation getInstance() {
+        if (instance == null) {
+            instance = new RegistrationValidation();
+        }
+        return instance;
+    }
+
+    public boolean isCorrectLogin(String login) {
+        return login != null && Pattern.matches(LOGIN_REG, login);
+    }
+
+    public boolean isCorrectPassword(String password) {
+        return password != null && Pattern.matches(PASSWORD_REG, password);//at least one letter uppercase and one lowercase and one digit
+    }
+
+    public boolean isCorrectEmail(String email) {
+        return email != null && email.length() < 46 && Pattern.matches(EMAIL_REG, email);
     }
 }

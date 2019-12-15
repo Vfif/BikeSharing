@@ -6,44 +6,47 @@
 <html>
 <head>
     <title>Title</title>
+    <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
+
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/controller" method="post">
-    <input type="hidden" name="command" value="registration"/>
-    <label for="login"><fmt:message key="label.login"/>:
-        <input type="text" name="login" id="login" pattern="\w+"/>      <%--разрешать русский и английский логин--%>
+<form class="form-3" action="${pageContext.request.contextPath}/controller" method="post">
+    <label for="login"><fmt:message key="label.login"/>:</label>
+        <input type="text" name="login" id="login" pattern="[A-Za-zА-Яа-я\d]{0,45}"
+               maxlength="45"
                title="<fmt:message key="invalid.login"/>" required/>
-    </label>
-    <br/>
-    <label style="color: red">
+
         <c:if test="${incorrectLogin}">
-            <fmt:message key="invalid.registration.login"/>
+            <label><fmt:message key="invalid.registration.login"/></label>
         </c:if>
-    </label>
-    <br/>
-    <label for="password"><fmt:message key="label.password"/>:
+
+    <label for="password"><fmt:message key="label.password"/>:</label>
         <input type="text" name="password" id="password"
-               pattern="(?=.*[A-ZА-Я])(?=.*[a-zа-я])(?=.*\d)([A-Za-zА-Яа-я\d]{8,})"
+               pattern="(?=.*[A-ZА-Я])(?=.*[a-zа-я])(?=.*\d)([A-Za-zА-Яа-я\d]{8,45})"
+               maxlength="45"
                title = "<fmt:message key="invalid.registration.password"/>"
                required/>
-    </label>
-    <br/>
+
     <c:if test="${incorrectPassword}">
-        <fmt:message key="invalid.registration.password"/>
+        <label><fmt:message key="invalid.registration.password"/></label>
     </c:if>
-    <br/>
-    <label for="email"><fmt:message key="label.email"/>:
+
+
+    <label for="email"><fmt:message key="label.email"/>:</label>
         <input type="text" name="email" id="email"
-               pattern="^\w{6,}@\w+\.\p{Lower}{2,4}$"
-               oninvalid="setCustomValidity('<fmt:message key="invalid.registration.email"/>')"
+               pattern="^\w{6,}@[a-z]+\.[a-z]{2,4}$"
+               maxlength="45"
+               title = "<fmt:message key="invalid.registration.email"/>"
                required/>
-    </label>
-    <br/>
+
     <c:if test="${incorrectEmail}">
-        <fmt:message key="invalid.registration.email"/>
+        <label style="float: right"> <fmt:message key="invalid.registration.email"/></label>
     </c:if>
-    <br/>
+
+
     <input type="submit" value="<fmt:message key="button.save"/>"/>
+    <input type="hidden" name="command" value="registration"/>
+
 </form>
 </body>
 </html>

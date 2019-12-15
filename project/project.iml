@@ -18,5 +18,12 @@
         </descriptors>
       </configuration>
     </facet>
+    <facet type="javaeeApplication" name="javaEEApplication2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/project/META-INF/application.xml" />
+        </descriptors>
+      </configuration>
+    </facet>
   </component>
 </module>

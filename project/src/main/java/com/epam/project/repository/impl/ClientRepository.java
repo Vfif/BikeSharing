@@ -6,7 +6,8 @@ import com.epam.project.entity.Client;
 import com.epam.project.exception.ConnectionPoolException;
 import com.epam.project.exception.RepositoryException;
 import com.epam.project.repository.AbstractRepository;
-import com.epam.project.repository.specification.Specification;
+import com.epam.project.repository.specification.QuerySpecification;
+import com.epam.project.repository.specification.UpdateSpecification;
 import com.epam.project.type.ClientType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,6 +18,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static com.epam.project.command.ParameterName.*;
 
 public class ClientRepository implements AbstractRepository<Client> {
     private static final ClientRepository instance = new ClientRepository();
@@ -49,32 +52,22 @@ public class ClientRepository implements AbstractRepository<Client> {
         throw new UnsupportedOperationException();
     }
 
-    /*@Override
-    public void update(Specification specification) throws RepositoryException {
-        try (ProxyConnection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = specification.specify(connection)) {
-            statement.executeUpdate();
-        } catch (SQLException | ConnectionPoolException e) {
-            Logger.error("SQL exception (request or table failed): ", e);
-            throw new RepositoryException(e);
-        }
-    }*/
-
     @Override
-    public List<Client> query(Specification specification) throws RepositoryException {
+    public List<Client> query(QuerySpecification specification) throws RepositoryException {
         List<Client> clients = new ArrayList<>();
         try (ProxyConnection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = specification.specify(connection)) {
             ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()) {
+            while (resultSet.next()) {
                 Client client = new Client();
-                client.setRole(ClientType.valueOf(resultSet.getString("role").toUpperCase()));
-                client.setLogin(resultSet.getString("login"));
-                client.setPassword(resultSet.getString("password"));
-                client.setEmail(resultSet.getString("email"));
-                client.setCash(resultSet.getDouble("cash"));
-                client.setStatus(resultSet.getInt("status") == 1);//if 1 - user is banned
-                client.setBikeId(resultSet.getInt("bikeId"));
+                client.setId(resultSet.getInt(ID));
+                client.setRole(ClientType.valueOf(resultSet.getString("role.name").toUpperCase()));
+                client.setLogin(resultSet.getString(LOGIN));
+                client.setPassword(resultSet.getString(PASSWORD));
+                client.setEmail(resultSet.getString(EMAIL));
+                client.setCash(resultSet.getDouble(CASH));
+                client.setStatus(resultSet.getInt(STATUS) == 1);//if 1 - user is banned
+                client.setBikeId(resultSet.getInt(BIKE_ID));
                 clients.add(client);
             }
         } catch (SQLException | ConnectionPoolException e) {
@@ -82,6 +75,27 @@ public class ClientRepository implements AbstractRepository<Client> {
             throw new RepositoryException(e);
         }
         return clients;
+    }
+
+    public void transaction(UpdateSpecification... specifications) throws RepositoryException {
+        try (ProxyConnection connection = ConnectionPool.getInstance().getConnection()) {
+            try {
+                connection.setAutoCommit(false);
+                for (UpdateSpecification specification : specifications) {
+                    try (PreparedStatement statement = specification.specify(connection)) {
+                        statement.executeUpdate();
+                    }
+                }
+                connection.commit();
+            } catch (SQLException ex) {
+                connection.rollback();
+                Logger.error(ex);
+                throw new RepositoryException(ex);
+            }
+        } catch (SQLException | ConnectionPoolException e) {
+            Logger.error(e);
+            throw new RepositoryException(e);
+        }
     }
 }
 

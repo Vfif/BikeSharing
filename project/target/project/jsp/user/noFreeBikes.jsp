@@ -6,10 +6,13 @@
 <html>
 <head>
     <title>Title</title>
+    <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
 </head>
 <body>
-<fmt:message key="text.apologize"/>
-</br>
-<a href="controller?command=logout"><fmt:message key="button.logout"/></a>
+<form class="form-3" name="loginForm" method="POST" action="${pageContext.request.contextPath}/controller">
+    <label style="width: 100%;"><fmt:message key="text.apologize"/></label>
+    <input type="hidden" name="command" value="logout"/>
+    <input type="submit" value="<fmt:message key="button.logout"/>"/>
+</form>
 </body>
 </html>

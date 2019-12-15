@@ -9,8 +9,17 @@ public class Bike extends Entity {
     private double cost;
     private int location;
     private long rentTime;
+    private boolean status;
 
     public Bike() {
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public Bike(int location) {
@@ -92,6 +101,7 @@ public class Bike extends Entity {
         if (Double.compare(bike.getCost(), getCost()) != 0) return false;
         if (getLocation() != bike.getLocation()) return false;
         if (getRentTime() != bike.getRentTime()) return false;
+        if (isStatus() != bike.isStatus()) return false;
         if (getName() != null ? !getName().equals(bike.getName()) : bike.getName() != null) return false;
         if (getDescription() != null ? !getDescription().equals(bike.getDescription()) : bike.getDescription() != null)
             return false;
@@ -112,6 +122,7 @@ public class Bike extends Entity {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + getLocation();
         result = 31 * result + (int) (getRentTime() ^ (getRentTime() >>> 32));
+        result = 31 * result + (isStatus() ? 1 : 0);
         return result;
     }
 
@@ -126,6 +137,7 @@ public class Bike extends Entity {
         sb.append(", cost=").append(cost);
         sb.append(", location=").append(location);
         sb.append(", rentTime=").append(rentTime);
+        sb.append(", status=").append(status);
         sb.append('}');
         return sb.toString();
     }

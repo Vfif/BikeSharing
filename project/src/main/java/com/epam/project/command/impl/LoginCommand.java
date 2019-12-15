@@ -1,51 +1,56 @@
 package com.epam.project.command.impl;
 
 import com.epam.project.command.ActionCommand;
-import com.epam.project.controller.PageInfo;
+import com.epam.project.controller.Router;
+import com.epam.project.entity.Bike;
 import com.epam.project.entity.Client;
 import com.epam.project.exception.CommandException;
 import com.epam.project.exception.ServiceException;
 import com.epam.project.resource.ConfigurationManager;
 import com.epam.project.service.LoginService;
+import com.epam.project.validation.LoginValidation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
+import static com.epam.project.command.ParameterName.*;
 import static com.epam.project.type.ClientType.ADMIN;
 import static com.epam.project.type.ClientType.USER;
 import static com.epam.project.type.PageChangeType.FORWARD;
 
 public class LoginCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
-    private static final String LOGIN = "login";
-    private static final String PASSWORD = "password";
-    private static final String ROLE = "role";
-    private static final String CASH = "cash";
-    private static final String STATUS = "status";
-    private static final String BIKE_ID = "bikeId";
 
     @Override
-    public PageInfo execute(HttpServletRequest request) throws CommandException {
+    public Router execute(HttpServletRequest request) throws CommandException {
         Logger.debug("Login command");
-        PageInfo pageInfo = new PageInfo();
-        pageInfo.setWay(FORWARD);
+        Router router = new Router();
+        router.setWay(FORWARD);
 
         String login = request.getParameter(LOGIN);
         String password = request.getParameter(PASSWORD);
         try {
-            Client client = LoginService.getClientFromDatabase(login, password);
+            if(LoginValidation.getInstance().isXssAttack(login)
+            || LoginValidation.getInstance().isXssAttack(password)) {
+                throw new CommandException();
+            }
+            Client client = LoginService.getInstance().findClient(login, password);
             if (client != null) {
                 if (client.getRole() == ADMIN) {
-                    pageInfo.setPage(ConfigurationManager.getProperty("path.page.admin"));
+                    router.setPage(ConfigurationManager.getProperty("path.page.admin"));
                 } else if (client.getRole() == USER) {
-                    if (client.isStatus()) {//if user is banned
-                        pageInfo.setPage(ConfigurationManager.getProperty("path.page.block"));
+                    if (client.getBikeId() != -1) {//if user has already rented bike
+                        router.setPage(ConfigurationManager.getProperty("path.page.rent"));
+                        request.getSession().setAttribute(BIKE_ID, client.getBikeId());
+                        Bike bike = LoginService.getInstance().findBikeById(client.getBikeId());
+                        request.getSession().setAttribute(COST, bike.getCost());
+                        request.getSession().setAttribute(TIME, bike.getRentTime());
                     } else {
-                        if (client.getBikeId() == null) {//if user has already rented bike
-                            pageInfo.setPage(ConfigurationManager.getProperty("path.page.rent"));
+                        if (client.isStatus()) {//if user is banned
+                            router.setPage(ConfigurationManager.getProperty("path.page.block"));
                         } else {//else search bike
-                            pageInfo.setPage(ConfigurationManager.getProperty("path.page.load"));
+                            router.setPage(ConfigurationManager.getProperty("path.page.load"));
                         }
                     }
                 }
@@ -55,12 +60,12 @@ public class LoginCommand implements ActionCommand {
 
             } else {
                 request.setAttribute("errorLogOrPass", true);
-                pageInfo.setPage(ConfigurationManager.getProperty("path.page.login"));
+                router.setPage(ConfigurationManager.getProperty("path.page.login"));
             }
         } catch (ServiceException e) {
             Logger.error(e);
             throw new CommandException(e);
         }
-        return pageInfo;
+        return router;
     }
 }

@@ -1,6 +1,6 @@
 package com.epam.project.resource;
 
-import com.epam.project.exception.PropertiesFileNotFound;
+import com.epam.project.exception.PropertiesFileNotFoundException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,10 +13,10 @@ public class DatabaseManager {
     private static String url;
     private static int poolSize;
 
-    private DatabaseManager() throws PropertiesFileNotFound {
+    private DatabaseManager() throws PropertiesFileNotFoundException {
         try {
             FileInputStream stream =
-                    new FileInputStream("C:\\Users\\Home\\IdeaProjects\\JavaWeb\\project\\src\\main\\resources\\database.properties");
+                    new FileInputStream("C:\\Users\\Home\\IdeaProjects\\JavaWeb\\project\\src\\main\\resources\\database\\database.properties");
             properties = new Properties();
             properties.load(stream);
             url = (String) properties.remove("url");
@@ -26,11 +26,11 @@ public class DatabaseManager {
                 poolSize = DEFAULT_POOL_SIZE;
             }
         } catch (IOException e) {
-            throw new PropertiesFileNotFound();
+            throw new PropertiesFileNotFoundException();
         }
     }
 
-    public static DatabaseManager getInstance() throws PropertiesFileNotFound {
+    public static DatabaseManager getInstance() throws PropertiesFileNotFoundException {
         if (instance == null) {
             instance = new DatabaseManager();
         }

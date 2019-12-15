@@ -1,7 +1,7 @@
 package com.epam.project.connection;
 
 import com.epam.project.exception.ConnectionPoolException;
-import com.epam.project.exception.PropertiesFileNotFound;
+import com.epam.project.exception.PropertiesFileNotFoundException;
 import com.epam.project.resource.DatabaseManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,36 +9,46 @@ import org.apache.logging.log4j.Logger;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.Timer;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public final class ConnectionPool {
-    private static final ReentrantLock lock = new ReentrantLock();
     private static Logger Logger = LogManager.getLogger();
+    private static final ReentrantLock lock = new ReentrantLock();
+    private static Condition condition = lock.newCondition();
     private static ConnectionPool instance;
     private static int poolSize;
     private static AtomicBoolean flag = new AtomicBoolean();
-    private BlockingQueue<ProxyConnection> connections;
+    private BlockingQueue<ProxyConnection> freeConnections;
+    private ArrayList<ProxyConnection> givenConnections;
 
     private ConnectionPool() {
         try {
             DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.error("Cannot register driver ", e);
         }
         try {
             poolSize = DatabaseManager.getInstance().getPoolSize();
-        } catch (PropertiesFileNotFound e) {
+        } catch (PropertiesFileNotFoundException e) {
             Logger.error("Cannot read size of connection pool from properties file", e);
         }
-        connections = new ArrayBlockingQueue<>(poolSize);
+        freeConnections = new ArrayBlockingQueue<>(poolSize);
+        givenConnections = new ArrayList<>();
         for (int i = 0; i < poolSize; i++) {
             ProxyConnection proxyConnection = new ProxyConnection();
-            connections.offer(proxyConnection);
+            freeConnections.offer(proxyConnection);
         }
+        Timer timer = new Timer(true);
+        timer.schedule(new ConnectionPoolSupport(lock, condition, poolSize, freeConnections, givenConnections),
+                TimeUnit.DAYS.toMillis(1), TimeUnit.DAYS.toMillis(1));
     }
 
     public static ConnectionPool getInstance() {
@@ -66,7 +76,12 @@ public final class ConnectionPool {
 
     public ProxyConnection getConnection() throws ConnectionPoolException {
         try {
-            return connections.take();
+            if(lock.isLocked()){
+                condition.await();
+            }
+            ProxyConnection connection = freeConnections.take();
+            givenConnections.add(connection);
+            return connection;
         } catch (InterruptedException e) {
             Logger.error(e);
         }
@@ -77,13 +92,14 @@ public final class ConnectionPool {
         if (!connection.getAutoCommit()) {
             connection.setAutoCommit(true);
         }
-        connections.offer(connection);
+        freeConnections.offer(connection);
+        givenConnections.remove(connection);
     }
 
     public void destroyPool() throws ConnectionPoolException {
         try {
             for (int i = 0; i < poolSize; i++) {
-                connections.take().closeConnection();
+                freeConnections.take().closeConnection();
             }
             deregisterDrivers();
         } catch (SQLException | InterruptedException e) {

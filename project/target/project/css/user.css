@@ -1,9 +1,22 @@
 .label,
-label{
-    background: #ffffff;
+label {
+   /* text-shadow: 0 0 20px #7a15ea;*/
+    background: #7a15ea;
+    color: #cccccc;
 }
 
 .text,
 input[type="checkbox"] {
     display: none;
+}
+
+.div,
+div {
+    color: #cccccc;
+    text-align: center;
+    background-color: #7a15ea;
+    /*opacity: 0.7;*/
+}
+form {
+    display: inline;
 }

@@ -1,6 +1,6 @@
 package com.epam.project.connection;
 
-import com.epam.project.exception.PropertiesFileNotFound;
+import com.epam.project.exception.PropertiesFileNotFoundException;
 import com.epam.project.resource.DatabaseManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,7 +21,7 @@ public class ProxyConnection implements Connection{
             connection = DriverManager.getConnection(url, properties);
         } catch (SQLException e) {
             Logger.error("Not obtained connection ", e);
-        } catch (PropertiesFileNotFound e){
+        } catch (PropertiesFileNotFoundException e){
             Logger.error("Not found database.properties file ", e);
         }
     }

@@ -34,31 +34,74 @@ public enum CommandType {
             this.command = new ReplenishmentCommand();
         }
     },
-    RENT{
+    RENT {
         {
             this.command = new RentCommand();
         }
     },
-    PAY{
+    PAY {
         {
             this.command = new PayCommand();
         }
     },
-    ADD_BIKE{
+    ADD_BIKE {
         {
             this.command = new AddBikeCommand();
         }
     },
-    SAVE_STATUS{
+    SAVE_STATUS {
         {
-            this.command = new SaveStatusCommand();
+            this.command = new SaveUserStatusCommand();
         }
     },
-    GET_USER_LIST{
+    GET_USER_LIST {
         {
             this.command = new GetUserListCommand();
         }
+    },
+    RATE {
+        {
+            this.command = new RateCommand();
+
+        }
+    },
+    GO_TO{
+        {
+            this.command = new GoToCommand();
+
+        }
+    },
+    HISTORY{
+        {
+            this.command = new HistoryCommand();
+
+        }
+    },
+    GET_BIKE_LIST{
+        {
+            this.command = new GetBikeListCommand();
+
+        }
+    },
+    MODIFY_BIKE{
+        {
+            this.command = new ModifyBikeCommand();
+
+        }
+    },
+    DELETE_BIKE{
+        {
+            this.command = new DeleteBikeCommand();
+
+        }
+    },
+    CHANGE_BIKE{
+        {
+            this.command = new ChangeBikeCommand();
+
+        }
     };
+
     ActionCommand command;
 
     public ActionCommand getCurrentCommand() {

@@ -5,6 +5,7 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head><title>Error Page</title></head>
+<link href="${pageContext.request.contextPath}/css/button.css" rel="stylesheet"/>
 <body>
 Request from ${pageContext.errorData.requestURI} is failed
 <br/>
@@ -13,8 +14,13 @@ Servlet name or type: ${pageContext.errorData.servletName}
 Status code: ${pageContext.errorData.statusCode}
 <br/>
 Exception: ${pageContext.errorData.throwable}
-
-<a href="controller?command=logout"><fmt:message key="button.logout"/></a>
+<br/>
+Exception: ${error}
+<br/>
+<form  method="POST" action="${pageContext.request.contextPath}/controller">
+    <input type="hidden" name="command" value="logout"/>
+    <input type="submit" value="<fmt:message key="button.logout"/>"/>
+</form>
 
 </body>
 </html>

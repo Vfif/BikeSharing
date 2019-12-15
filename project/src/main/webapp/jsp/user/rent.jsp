@@ -5,25 +5,39 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head>
+    <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
     <title>Title</title>
-</head>
-<body>
-<h1>A pleasant journey</h1>
-<form action="jsp/user/replenishment.jsp">
-    <input type="submit" value="<fmt:message key="button.replenishAccount"/>"/>
-</form>
-</br>
-<form method="post" action="${pageContext.request.contextPath}/controller"
-      onclick="function check() {
+    <script type="text/javascript">
+        window.onload = function () {
+            (function () {
+                var time = Math.ceil(((new Date().getTime() - ${time}) * ${cost}) / (1000 * 60 * 60))
+                    , div = document.getElementsByTagName('div');
+                div[0].innerHTML = time;
+                div[1].innerHTML = time - ${cash};
+                window.setTimeout(arguments.callee, 1000);
+            })();
+        };
+    </script>
 
-              var elem = document.getElementById('invalid');
-              if ((new Date().getTime() - ${rentTime})/(1000 * 60) * ${cost} > ${cash}){
-              elem.style.display = 'block';
-              }
-              else this.submit();}">
+</head>
+<body style="background: url(${pageContext.request.contextPath}/image/handlebar.jpeg) no-repeat; background-size: 100%;">
+<form class="form-3" method="post" action="${pageContext.request.contextPath}/controller">
+    <label style="width: 100%"><h1><fmt:message key="label.trip"/></h1></label>
+
+    <label style="width: 100%"><fmt:message key="label.balance"/>: ${cash}$</label>
+    <label style="width: 100%"><fmt:message key="label.pay"/>: <div style="display: inline"></div>$</label>
+
+    <input type="submit" value="<fmt:message key="button.replenishAccount"/>"/>
+    <input type="hidden" name="command" value="go_to"/>
+    <input type="hidden" name="page" value="replenishment"/>
+</form>
+<form class="form-3" method="post" action="${pageContext.request.contextPath}/controller">
     <input type="hidden" name="command" value="pay"/>
     <input type="submit" value="<fmt:message key="button.pay"/>"/>
-    <div id = "invalid" style="display:none;"><fmt:message key="button.lack.money"/></div>
+    <c:if test="${invalid}">
+        <fmt:message key="button.lack.money"/>:
+        <div style="display: inline"></div>$
+    </c:if>
 </form>
 </body>
 </html>

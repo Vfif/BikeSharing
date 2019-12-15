@@ -4,7 +4,7 @@ import com.epam.project.entity.Bike;
 import com.epam.project.exception.RepositoryException;
 import com.epam.project.exception.ServiceException;
 import com.epam.project.repository.impl.BikeRepository;
-import com.epam.project.repository.specification.impl.BikeSelectAllSpecification;
+import com.epam.project.repository.specification.bike.BikeSelectFreeSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,15 +13,26 @@ import java.util.List;
 
 public class PositioningService {
     private static Logger Logger = LogManager.getLogger();
+    private static PositioningService instance;
 
-    public static Bike getTheNearestBike(int location) throws ServiceException {
+    private PositioningService() {
+    }
+
+    public static PositioningService getInstance() {
+        if (instance == null) {
+            instance = new PositioningService();
+        }
+        return instance;
+    }
+
+    public Bike findTheNearestBike(int location) throws ServiceException {
         try {
-            List<Bike> bikes = BikeRepository.getInstance().query(new BikeSelectAllSpecification());
-            if(bikes.isEmpty()){
+            List<Bike> bikes = BikeRepository.getInstance().query(new BikeSelectFreeSpecification());
+            if (bikes.isEmpty()) {
                 return null;
-            }else if (bikes.size() == 1) {
+            } else if (bikes.size() == 1) {
                 return bikes.get(0);
-            }else{
+            } else {
                 return bikes.stream()//find the nearest if many found
                         .min(Comparator.comparingInt(o -> Math.abs(location - o.getLocation())))
                         .get();

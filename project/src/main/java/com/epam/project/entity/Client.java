@@ -3,6 +3,7 @@ package com.epam.project.entity;
 import com.epam.project.type.ClientType;
 
 public class Client extends Entity {
+    private int id;
     private ClientType role;
     private String login;
     private String password;
@@ -18,6 +19,14 @@ public class Client extends Entity {
         this.login = login;
         this.password = password;
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Integer getBikeId() {
@@ -77,12 +86,28 @@ public class Client extends Entity {
     }
 
     @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Client{");
+        sb.append("id=").append(id);
+        sb.append(", role=").append(role);
+        sb.append(", login='").append(login).append('\'');
+        sb.append(", password='").append(password).append('\'');
+        sb.append(", email='").append(email).append('\'');
+        sb.append(", status=").append(status);
+        sb.append(", cash=").append(cash);
+        sb.append(", bikeId=").append(bikeId);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o.getClass() != Client.class) return false;
 
         Client client = (Client) o;
 
+        if (getId() != client.getId()) return false;
         if (isStatus() != client.isStatus()) return false;
         if (Double.compare(client.getCash(), getCash()) != 0) return false;
         if (getRole() != client.getRole()) return false;
@@ -97,7 +122,8 @@ public class Client extends Entity {
     public int hashCode() {
         int result;
         long temp;
-        result = getRole() != null ? getRole().hashCode() : 0;
+        result = getId();
+        result = 31 * result + (getRole() != null ? getRole().hashCode() : 0);
         result = 31 * result + (getLogin() != null ? getLogin().hashCode() : 0);
         result = 31 * result + (getPassword() != null ? getPassword().hashCode() : 0);
         result = 31 * result + (getEmail() != null ? getEmail().hashCode() : 0);
@@ -106,19 +132,5 @@ public class Client extends Entity {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (getBikeId() != null ? getBikeId().hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Client{");
-        sb.append("role=").append(role);
-        sb.append(", login='").append(login).append('\'');
-        sb.append(", password='").append(password).append('\'');
-        sb.append(", email='").append(email).append('\'');
-        sb.append(", status=").append(status);
-        sb.append(", cash=").append(cash);
-        sb.append(", bikeId=").append(bikeId);
-        sb.append('}');
-        return sb.toString();
     }
 }

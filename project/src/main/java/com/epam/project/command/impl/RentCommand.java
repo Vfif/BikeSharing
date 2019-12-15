@@ -1,7 +1,7 @@
 package com.epam.project.command.impl;
 
 import com.epam.project.command.ActionCommand;
-import com.epam.project.controller.PageInfo;
+import com.epam.project.controller.Router;
 import com.epam.project.exception.CommandException;
 import com.epam.project.exception.ServiceException;
 import com.epam.project.resource.ConfigurationManager;
@@ -13,32 +13,35 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
+import static com.epam.project.command.ParameterName.*;
+
 public class RentCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
 
     @Override
-    public PageInfo execute(HttpServletRequest request) throws CommandException {
+    public Router execute(HttpServletRequest request) throws CommandException {
         Logger.debug("Rent command");
-        PageInfo pageInfo = new PageInfo();
-        int bikeId = (int) request.getSession().getAttribute("id");
-        String login = (String) request.getSession().getAttribute("login");
+        Router router = new Router();
+        int bikeId = (int) request.getSession().getAttribute(BIKE_ID);
+        String login = (String) request.getSession().getAttribute(LOGIN);
 
         try {
-            if (RentService.isBikeFreeById(bikeId)) {
-                pageInfo.setPage(ConfigurationManager.getProperty("path.page.rent"));
-                RentService.updateUserByBikeId(login, bikeId); //client -> bikeId
-                long rentTime = new Date().getTime();
-                RentService.updateBikeRentTime(bikeId, rentTime);//bike -> rentTime
-                request.setAttribute("rentTime", rentTime);
+            if (RentService.getInstance().isBikeFreeById(bikeId) &&
+                    RentService.getInstance().isClientNotBan(login)) {
+                router.setPage(ConfigurationManager.getProperty("path.page.rent"));
+                RentService.getInstance().updateUserByBikeId(login, bikeId); //client -> bikeId
+                long time = new Date().getTime();
+                RentService.getInstance().updateBikeRentTime(bikeId, time);//bike -> rentTime
+                request.getSession().setAttribute(TIME, time);
             } else {
-                pageInfo.setPage(ConfigurationManager.getProperty("path.page.end"));
-                request.setAttribute("invalid", true);
+                router.setPage(ConfigurationManager.getProperty("path.page.end"));
+                request.setAttribute(INVALID, true);
             }
         } catch (ServiceException e) {
             Logger.error(e);
             throw new CommandException(e);
         }
-        pageInfo.setWay(PageChangeType.FORWARD);
-        return pageInfo;
+        router.setWay(PageChangeType.REDIRECT);
+        return router;
     }
 }

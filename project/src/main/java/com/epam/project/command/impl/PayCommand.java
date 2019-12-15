@@ -1,7 +1,7 @@
 package com.epam.project.command.impl;
 
 import com.epam.project.command.ActionCommand;
-import com.epam.project.controller.PageInfo;
+import com.epam.project.controller.Router;
 import com.epam.project.exception.CommandException;
 import com.epam.project.exception.ServiceException;
 import com.epam.project.resource.ConfigurationManager;
@@ -15,35 +15,41 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
+import static com.epam.project.command.ParameterName.*;
+
 public class PayCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
 
     @Override
-    public PageInfo execute(HttpServletRequest request) throws CommandException {
+    public Router execute(HttpServletRequest request) throws CommandException {
         Logger.debug("Pay command");
-        PageInfo pageInfo = new PageInfo();
-        pageInfo.setWay(PageChangeType.FORWARD);
-        long rentTime = (long)request.getAttribute("rentTime");
-        double cost = (double)request.getAttribute("cost");
-        double cash = (double)request.getAttribute("cash");
+        Router router = new Router();
+        router.setWay(PageChangeType.FORWARD);
+        long rentTime = (long) request.getSession().getAttribute(TIME);
+        double cost = (double) request.getSession().getAttribute(COST);
+        double cash = (double) request.getSession().getAttribute(CASH);
         long currentTime = new Date().getTime();
 
-        if(PayValidation.isEnoughMoney(currentTime, rentTime, cash, cost)){
-            pageInfo.setPage(ConfigurationManager.getProperty("path.page.end"));
+        if (PayValidation.getInstance().isEnoughMoney(currentTime, rentTime, cash, cost)) {
+            router.setPage(ConfigurationManager.getProperty("path.page.end"));
             try {
-                int bikeId = (int) request.getSession().getAttribute("id");
-                String login = (String) request.getSession().getAttribute("login");
-                PayService.payForRental(login, currentTime, rentTime, cash, cost);//снять деньги
-                RentService.updateUserByBikeId(login, -1);//reset user bikeId
-                RentService.updateBikeRentTime(bikeId, 0);//reset bike rentTime
-            }catch (ServiceException e){
+                int bikeId = (int) request.getSession().getAttribute(BIKE_ID);
+                String login = (String) request.getSession().getAttribute(LOGIN);
+                Date time = new Date();
+                double money = PayService.getInstance().payForRental(login, currentTime, rentTime, cash, cost);//снять деньги
+                RentService.getInstance().updateUserByBikeId(login, -1);//reset user bikeId
+                RentService.getInstance().updateBikeRentTime(bikeId, 0);//reset bike rentTime
+                PayService.getInstance().registerTrip(login, bikeId, money, time);
+                int tripId =  PayService.getInstance().getTripId(bikeId, time);
+                request.getSession().setAttribute(ID, tripId);
+            } catch (ServiceException e) {
                 Logger.error(e);
                 throw new CommandException(e);
             }
-        }else{
-            request.setAttribute("invalid", true);
-            pageInfo.setPage(ConfigurationManager.getProperty("path.page.rent"));
+        } else {
+            request.setAttribute(INVALID, true);
+            router.setPage(ConfigurationManager.getProperty("path.page.rent"));
         }
-        return pageInfo;
+        return router;
     }
 }

@@ -1,0 +1,41 @@
+.example-1 .form-group {
+    margin: 70px;
+    padding-bottom: 5px;
+}
+
+.example-1 input[type=file] {
+    outline: 0;
+    opacity: 0;                             /* */
+    pointer-events: none;
+    user-select: none
+}
+
+.example-1 .label {
+    width: 120px;
+    border: 2px dashed grey;
+    border-radius: 5px;
+    display: block;
+    padding: 1.2em;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center
+}
+
+.example-1 .label i {
+    display: block;
+    font-size: 42px;
+    padding-bottom: 16px
+}
+
+.example-1 .label i, .example-1 .label .title {
+    color: grey;
+    transition: 200ms color
+}
+
+.example-1 .label:hover {
+    border: 2px solid #fff
+}
+
+.example-1 .label:hover i, .example-1 .label:hover .title {
+    color: #fff
+}

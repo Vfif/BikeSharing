@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/controller")
+@WebServlet(name = "bikeSharing", urlPatterns = {"/controller"})
 @MultipartConfig(fileSizeThreshold = 1024 * 1024
         , maxFileSize = 1024 * 1024 * 5
         , maxRequestSize = 1024 * 1024 * 5 * 5)
@@ -37,33 +37,34 @@ public class Controller extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String commandString = request.getParameter(COMMAND);
         ActionCommand command;
-        PageInfo pageInfo;
+        Router router;
         try {
             command = actionFactory.defineCommand(commandString);
-            pageInfo = command.execute(request);
+            router = command.execute(request);
         } catch (CommandException ex) {
-            pageInfo = new PageInfo();
-            pageInfo.setPage(ConfigurationManager.getProperty("path.page.error"));
-            pageInfo.setWay(PageChangeType.REDIRECT);
-            request.getSession().setAttribute("nullPage","Page not found. Business logic error.");
+            router = new Router();
+            router.setPage(ConfigurationManager.getProperty("path.page.error"));
+            router.setWay(PageChangeType.REDIRECT);
+            request.getSession().setAttribute("error", ex);
         }
 
-        if (pageInfo.getWay() == PageChangeType.FORWARD) {
+        if (router.getWay() == PageChangeType.FORWARD) {
             getServletContext()
-                    .getRequestDispatcher(pageInfo.getPage())
+                    .getRequestDispatcher(router.getPage())
                     .forward(request, response);
         } else {
-            response.sendRedirect(request.getContextPath() + pageInfo.getPage());
+            response.sendRedirect(request.getContextPath() + router.getPage());
         }
     }
 
     @Override
     public void destroy() {
-        super.destroy();
+
         try {
             ConnectionPool.getInstance().destroyPool();
         } catch (ConnectionPoolException e) {
             Logger.error("Cannot destroy connection pool", e);
         }
+        super.destroy();
     }
 }

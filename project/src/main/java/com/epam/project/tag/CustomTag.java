@@ -8,50 +8,39 @@ import java.io.IOException;
 @SuppressWarnings("serial")
 public class CustomTag extends TagSupport {
     private String login;
-    private int rows;
+    private boolean status;
+    private String value;
 
-    public void setHead(String login) {
+    public void setLogin(String login) {
         this.login = login;
     }
 
-    public void setRows(Integer rows) {
-        this.rows = rows;
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     @Override
     public int doStartTag() throws JspTagException {
         try {
             JspWriter out = pageContext.getOut();
-            out.write("<table border='2'>");
-            out.write("<tr><th>" + login + "</th><th>Action</th></tr>");
-            out.write("<tr><td>");
-        } catch (IOException e) {
-            throw new JspTagException(e.getMessage());
-        }
-        return EVAL_BODY_INCLUDE;
-    }
-
-    @Override
-    public int doAfterBody() throws JspTagException {
-        if (rows-- > 1) {
-            try {
-                pageContext.getOut().write("</td></tr><tr><td>");
-            } catch (IOException e) {
-                throw new JspTagException(e.getMessage());
+            out.write("<tr><td>" + login + "</td><td>");
+            out.write("<input type=\"hidden\" name=\"login\" value=\"" + login + "\"/>");
+            out.write("<input type=\"hidden\" name=\"status\" value=\"" + status + "\"/>");
+            out.write("<input type=\"submit\" name=\"button\" value =\""+ value +"\" ");
+            if (status) {
+                out.write("style=\"background: green\"");
+            } else {
+                out.write("style=\"background: red\"");
             }
-            return EVAL_BODY_AGAIN;
-        } else {
-            return SKIP_BODY;
-        }
-    }
+            out.write("</td></tr>");
 
-    @Override
-    public int doEndTag() throws JspTagException {
-        try {
-            pageContext.getOut().write("</td></tr></table>");
         } catch (IOException e) {
             throw new JspTagException(e.getMessage());
         }
-        return EVAL_PAGE;
+        return SKIP_BODY;
     }
 }

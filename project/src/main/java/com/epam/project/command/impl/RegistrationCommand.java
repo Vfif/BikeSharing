@@ -1,7 +1,7 @@
 package com.epam.project.command.impl;
 
 import com.epam.project.command.ActionCommand;
-import com.epam.project.controller.PageInfo;
+import com.epam.project.controller.Router;
 import com.epam.project.entity.Client;
 import com.epam.project.exception.CommandException;
 import com.epam.project.exception.RepositoryException;
@@ -15,27 +15,23 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
+import static com.epam.project.command.ParameterName.*;
 import static com.epam.project.type.PageChangeType.FORWARD;
 import static com.epam.project.type.PageChangeType.REDIRECT;
 
 public class RegistrationCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
-    private static final String LOGIN = "login";
-    private static final String PASSWORD = "password";
-    private static final String EMAIL = "email";
 
     @Override
-    public PageInfo execute(HttpServletRequest request) throws CommandException {
+    public Router execute(HttpServletRequest request) throws CommandException {
         Logger.debug("Registration command");
-        PageInfo pageInfo = new PageInfo();
+        Router router = new Router();
 
         String login = request.getParameter(LOGIN);
         String password = request.getParameter(PASSWORD);
         String email = request.getParameter(EMAIL);
 
-        Map<String, Boolean> resultOfError = RegistrationService.checkRegistrationForm(login, password, email);
-
-        resultOfError.forEach(request::setAttribute);
+        Map<String, Boolean> resultOfError = RegistrationService.getInstance().checkRegistrationForm(login, password, email);
         boolean invalidResult = resultOfError.values().stream().filter(o -> o.equals(true)).findAny().orElse(false);
 
         if (!invalidResult) {
@@ -48,12 +44,13 @@ public class RegistrationCommand implements ActionCommand {
             } catch (RepositoryException e) {
                 throw new CommandException(e);
             }
-            pageInfo.setPage(ConfigurationManager.getProperty("path.page.login"));
-            pageInfo.setWay(REDIRECT);
+            router.setPage(ConfigurationManager.getProperty("path.page.login"));
+            router.setWay(REDIRECT);
         } else {
-            pageInfo.setPage(ConfigurationManager.getProperty("path.page.registration"));
-            pageInfo.setWay(FORWARD);
+            resultOfError.forEach(request::setAttribute);
+            router.setPage(ConfigurationManager.getProperty("path.page.registration"));
+            router.setWay(FORWARD);
         }
-        return pageInfo;
+        return router;
     }
 }

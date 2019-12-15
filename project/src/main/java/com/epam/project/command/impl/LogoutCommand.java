@@ -1,7 +1,7 @@
 package com.epam.project.command.impl;
 
 import com.epam.project.command.ActionCommand;
-import com.epam.project.controller.PageInfo;
+import com.epam.project.controller.Router;
 import com.epam.project.resource.ConfigurationManager;
 import com.epam.project.type.PageChangeType;
 import org.apache.logging.log4j.LogManager;
@@ -13,12 +13,12 @@ public class LogoutCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
 
     @Override
-    public PageInfo execute(HttpServletRequest request) {
+    public Router execute(HttpServletRequest request) {
         Logger.debug("Logout command");
-        PageInfo pageInfo = new PageInfo();
-        pageInfo.setPage(ConfigurationManager.getProperty("path.page.index"));
-        pageInfo.setWay(PageChangeType.REDIRECT);
+        Router router = new Router();
         request.getSession().invalidate();
-        return pageInfo;
+        router.setPage(ConfigurationManager.getProperty("path.page.index"));
+        router.setWay(PageChangeType.REDIRECT);
+        return router;
     }
 }
