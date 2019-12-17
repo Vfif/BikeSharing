@@ -6,7 +6,7 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head>
-    <title>Title</title>
+    <title><fmt:message key="button.banUser"/></title>
     <link href="${pageContext.request.contextPath}/css/banUser.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/button.css" rel="stylesheet"/>
 </head>
@@ -14,8 +14,8 @@
 
 <table>
     <tr>
-        <th>Login</th>
-        <th>Action</th>
+        <th><fmt:message key="label.login"/></th>
+        <th><fmt:message key="label.action"/></th>
     </tr>
     <c:forEach items="${users}" var="user">
         <form action="${pageContext.request.contextPath}/controller" method="post">

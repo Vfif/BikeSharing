@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.USERS;
+import static com.epam.project.type.ParameterName.USERS;
 
 public class GetUserListCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();

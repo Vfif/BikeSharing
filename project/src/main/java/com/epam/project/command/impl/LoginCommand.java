@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 import static com.epam.project.type.ClientType.ADMIN;
 import static com.epam.project.type.ClientType.USER;
 import static com.epam.project.type.PageChangeType.FORWARD;
@@ -31,8 +31,8 @@ public class LoginCommand implements ActionCommand {
         String login = request.getParameter(LOGIN);
         String password = request.getParameter(PASSWORD);
         try {
-            if(LoginValidation.getInstance().isXssAttack(login)
-            || LoginValidation.getInstance().isXssAttack(password)) {
+            if (LoginValidation.getInstance().isXssAttack(login)
+                    || LoginValidation.getInstance().isXssAttack(password)) {
                 throw new CommandException();
             }
             Client client = LoginService.getInstance().findClient(login, password);
@@ -40,16 +40,16 @@ public class LoginCommand implements ActionCommand {
                 if (client.getRole() == ADMIN) {
                     router.setPage(ConfigurationManager.getProperty("path.page.admin"));
                 } else if (client.getRole() == USER) {
-                    if (client.getBikeId() != -1) {//if user has already rented bike
+                    if (client.getBikeId() != -1) {
                         router.setPage(ConfigurationManager.getProperty("path.page.rent"));
                         request.getSession().setAttribute(BIKE_ID, client.getBikeId());
                         Bike bike = LoginService.getInstance().findBikeById(client.getBikeId());
                         request.getSession().setAttribute(COST, bike.getCost());
                         request.getSession().setAttribute(TIME, bike.getRentTime());
                     } else {
-                        if (client.isStatus()) {//if user is banned
+                        if (client.isStatus()) {
                             router.setPage(ConfigurationManager.getProperty("path.page.block"));
-                        } else {//else search bike
+                        } else {
                             router.setPage(ConfigurationManager.getProperty("path.page.load"));
                         }
                     }

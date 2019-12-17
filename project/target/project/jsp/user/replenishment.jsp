@@ -5,10 +5,8 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head>
-    <title>Title</title>
+    <title><fmt:message key="title.replenishment"/></title>
     <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
-
-
 </head>
 <body>
 <form class="form-3" action="${pageContext.request.contextPath}/controller" method="post">

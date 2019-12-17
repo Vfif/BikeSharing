@@ -4,10 +4,10 @@ import javax.servlet.http.Part;
 import java.util.regex.Pattern;
 
 public class AddBikeValidation {
-    private static final String NAME_REG = "[A-Za-zА-Яа-я\\d\\s-_]{1,45}";
+    private static final String NAME_REG = "[A-Za-zА-Яа-я\\d\\s\\-_.]{1,45}";
     private static final String COST_REG = "\\d{1,3}";
-    private static final String ADDRESS_REG = "[A-Za-zА-Яа-я\\d\\s.,]{1,45}";
-    private static final String DESCRIPTION_REG = "[A-Za-zА-Яа-я\\d\\s.,]{1,200}";
+    private static final String ADDRESS_REG = "[A-Za-zА-Яа-я\\d\\s\\-.,!?:;]{1,45}";
+    private static final String DESCRIPTION_REG = "[A-Za-zА-Яа-я\\d\\s\\-.,!?:;]{1,200}";
     private static final String IMAGE_REG = ".*\\.(jpeg|png|jpg)$";
 
     private static AddBikeValidation instance;

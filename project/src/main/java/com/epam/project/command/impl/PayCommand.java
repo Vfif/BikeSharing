@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class PayCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
@@ -36,9 +36,9 @@ public class PayCommand implements ActionCommand {
                 int bikeId = (int) request.getSession().getAttribute(BIKE_ID);
                 String login = (String) request.getSession().getAttribute(LOGIN);
                 Date time = new Date();
-                double money = PayService.getInstance().payForRental(login, currentTime, rentTime, cash, cost);//снять деньги
-                RentService.getInstance().updateUserByBikeId(login, -1);//reset user bikeId
-                RentService.getInstance().updateBikeRentTime(bikeId, 0);//reset bike rentTime
+                double money = PayService.getInstance().payForRental(login, currentTime, rentTime, cash, cost);
+                RentService.getInstance().updateUserByBikeId(login, -1);
+                RentService.getInstance().updateBikeRentTime(bikeId, 0);
                 PayService.getInstance().registerTrip(login, bikeId, money, time);
                 int tripId =  PayService.getInstance().getTripId(bikeId, time);
                 request.getSession().setAttribute(ID, tripId);

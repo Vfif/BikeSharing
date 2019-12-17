@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 @SuppressWarnings("unchecked")
 public class ChangeBikeCommand implements ActionCommand {

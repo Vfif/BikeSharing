@@ -11,20 +11,21 @@ public class RateService {
     private static Logger Logger = LogManager.getLogger();
     private static RateService instance;
 
-    private RateService(){}
+    private RateService() {
+    }
 
-    public static RateService getInstance(){
-        if(instance == null){
+    public static RateService getInstance() {
+        if (instance == null) {
             instance = new RateService();
         }
         return instance;
     }
 
     public void rate(int id, String rate) throws ServiceException {
-        if(rate!= null) {
+        if (rate != null) {
             int mark = Integer.parseInt(rate);
             try {
-            TripRepository.getInstance().update(new TripUpdateMarkByIdSpecification(id, mark));
+                TripRepository.getInstance().update(new TripUpdateMarkByIdSpecification(id, mark));
             } catch (RepositoryException e) {
                 Logger.error(e);
                 throw new ServiceException(e);

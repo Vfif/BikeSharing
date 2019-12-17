@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class RateCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();

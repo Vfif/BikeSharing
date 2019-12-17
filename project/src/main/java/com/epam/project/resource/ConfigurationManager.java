@@ -2,10 +2,12 @@ package com.epam.project.resource;
 
 import java.util.ResourceBundle;
 
-public class ConfigurationManager {//singleton
+public class ConfigurationManager {
     private final static ResourceBundle resourceBundle = ResourceBundle.getBundle("config");
 
-    private ConfigurationManager() { }
+    private ConfigurationManager() {
+    }
+
     public static String getProperty(String key) {
         return resourceBundle.getString(key);
     }

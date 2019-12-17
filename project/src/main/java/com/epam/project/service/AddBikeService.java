@@ -8,7 +8,7 @@ import javax.servlet.http.Part;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class AddBikeService {
     private static Logger Logger = LogManager.getLogger();

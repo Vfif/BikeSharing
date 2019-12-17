@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 import static com.epam.project.type.PageChangeType.FORWARD;
 
 public class LocaleCommand implements ActionCommand {

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class BikeRepository implements AbstractRepository<Bike> {
     private static final BikeRepository instance = new BikeRepository();

@@ -19,11 +19,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class ClientRepository implements AbstractRepository<Client> {
     private static final ClientRepository instance = new ClientRepository();
-    private static final String INSERT = "INSERT INTO client (login, password, email, registrationDate) VALUES (?,?,?,?)";
+    private static final String INSERT = "INSERT INTO client (login, password, email, registration_date) VALUES (?,?,?,?)";
     private static Logger Logger = LogManager.getLogger();
 
     private ClientRepository() {
@@ -61,7 +61,7 @@ public class ClientRepository implements AbstractRepository<Client> {
             while (resultSet.next()) {
                 Client client = new Client();
                 client.setId(resultSet.getInt(ID));
-                client.setRole(ClientType.valueOf(resultSet.getString("role.name").toUpperCase()));
+                client.setRole(ClientType.valueOf(resultSet.getString(ROLE + "." + NAME).toUpperCase()));
                 client.setLogin(resultSet.getString(LOGIN));
                 client.setPassword(resultSet.getString(PASSWORD));
                 client.setEmail(resultSet.getString(EMAIL));

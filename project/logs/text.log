@@ -1,0 +1,11 @@
+2019-12-17 19:48:50 [main] DEBUG ClientSelectByLoginAndPasswordSpecification - find client by login and password
+2019-12-17 20:00:13 [main] DEBUG ClientSelectByLoginAndPasswordSpecification - find client by login and password
+2019-12-17 20:00:13 [main] DEBUG ClientUpdateCashSpecification - update client
+2019-12-17 20:00:13 [main] DEBUG ClientUpdateBikeIdSpecification - update client by login
+2019-12-17 20:00:13 [main] DEBUG ClientUpdateStatusSpecification - update client
+2019-12-17 20:00:13 [main] DEBUG ClientSelectByLoginSpecification - find client by login
+2019-12-17 20:16:48 [main] DEBUG BikeSelectAllSpecification - select all bikes
+2019-12-17 20:42:21 [main] DEBUG CardSelectByNumberCashSpecification - find client by login and password
+2019-12-17 20:42:21 [main] DEBUG CardSelectByNumberCashSpecification - find client by login and password
+2019-12-17 20:42:21 [main] DEBUG CardUpdateCashSpecification - update client
+2019-12-17 20:42:21 [main] DEBUG CardSelectByNumberCashSpecification - find client by login and password

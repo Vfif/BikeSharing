@@ -19,10 +19,11 @@ public class LoginService {
     private static Logger Logger = LogManager.getLogger();
     private static LoginService instance;
 
-    private LoginService(){}
+    private LoginService() {
+    }
 
-    public static LoginService getInstance(){
-        if(instance == null){
+    public static LoginService getInstance() {
+        if (instance == null) {
             instance = new LoginService();
         }
         return instance;

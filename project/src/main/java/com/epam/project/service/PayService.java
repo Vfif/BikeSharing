@@ -18,17 +18,18 @@ public class PayService {
     private static Logger Logger = LogManager.getLogger();
     private static PayService instance;
 
-    private PayService(){}
+    private PayService() {
+    }
 
-    public static PayService getInstance(){
-        if(instance == null){
+    public static PayService getInstance() {
+        if (instance == null) {
             instance = new PayService();
         }
         return instance;
     }
 
     public double payForRental(String login, long currentTime, long rentTime, double cash, double cost) throws ServiceException {
-        double payment = Math.ceil(((currentTime - rentTime)* cost )/(60 * 60 * 1000));
+        double payment = Math.ceil(((currentTime - rentTime) * cost) / (60 * 60 * 1000));
         double newCash = cash - payment;
         try {
             ClientRepository.getInstance().update(new ClientUpdateCashSpecification(login, newCash));

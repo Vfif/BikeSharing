@@ -26,6 +26,7 @@ public class Controller extends HttpServlet {
     private static Logger Logger = LogManager.getLogger();
     private static ActionFactory actionFactory = ActionFactory.getInstance();
     private static final String COMMAND = "command";
+    private static final String ERROR = "error";
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -45,7 +46,7 @@ public class Controller extends HttpServlet {
             router = new Router();
             router.setPage(ConfigurationManager.getProperty("path.page.error"));
             router.setWay(PageChangeType.REDIRECT);
-            request.getSession().setAttribute("error", ex);
+            request.getSession().setAttribute(ERROR, ex);
         }
 
         if (router.getWay() == PageChangeType.FORWARD) {

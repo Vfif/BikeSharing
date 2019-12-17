@@ -5,7 +5,7 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head>
-    <title>Title</title>
+    <title><fmt:message key="title.noBikes"/></title>
     <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
 </head>
 <body>

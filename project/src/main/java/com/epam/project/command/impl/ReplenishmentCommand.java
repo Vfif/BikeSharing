@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class ReplenishmentCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
@@ -22,12 +22,12 @@ public class ReplenishmentCommand implements ActionCommand {
         Logger.debug("Replenishment command");
         Router router = new Router();
         String number = request.getParameter(NUMBER);
-        String money = request.getParameter(CASH);//input cash
+        String money = request.getParameter(CASH);
         try {
             if (ReplenishmentService.getInstance().isCorrectCardData(number, money)) {
                 router.setPage(ConfigurationManager.getProperty("path.page.rent"));
                 String login = (String) request.getSession().getAttribute(LOGIN);
-                double cash = (double)request.getSession().getAttribute(CASH);//user cash
+                double cash = (double)request.getSession().getAttribute(CASH);
                 double inputCash = Double.parseDouble(money);
                 ReplenishmentService.getInstance().replenishment(login, number, cash, inputCash);
                 request.getSession().setAttribute(CASH, inputCash + cash);

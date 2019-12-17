@@ -6,7 +6,7 @@
 <html>
 <head>
     <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
-    <title>Title</title>
+    <title><fmt:message key="title.rent"/></title>
     <script type="text/javascript">
         window.onload = function () {
             (function () {

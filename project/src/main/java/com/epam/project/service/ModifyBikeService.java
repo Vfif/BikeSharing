@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class ModifyBikeService {
     private static Logger Logger = LogManager.getLogger();

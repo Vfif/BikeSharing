@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="commons-beanutils-1.8.3">
+    <CLASSES>
+      <root url="jar://D:/intellij-javadocs/intellij-javadocs/lib/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://D:/intellij-javadocs/intellij-javadocs/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://D:/intellij-javadocs/intellij-javadocs/lib/commons-lang3-3.1.jar!/" />
+      <root url="jar://D:/intellij-javadocs/intellij-javadocs/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://D:/intellij-javadocs/intellij-javadocs/lib/freemarker-2.3.23.jar!/" />
+      <root url="jar://D:/intellij-javadocs/intellij-javadocs/lib/intellij-javadocs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

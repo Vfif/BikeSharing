@@ -5,10 +5,9 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head>
-    <title>Welcome</title>
+    <title><fmt:message key="title.choice"/></title>
     <link href="css/user.css" rel="stylesheet"/>
     <link href="css/button.css" rel="stylesheet"/>
-
 </head>
 <body style="background: url(image/map.png) no-repeat; background-size: 100%;">
 <img src="${image}" alt="Bike" style="background: transparent; float:right; width: 1000px; height: 100%"/>
@@ -22,8 +21,7 @@
 </br>
 <h2>
     <div id="rectangle" >
-        <fmt:message key="label.name"/> : ${name}
-        </br>
+        <fmt:message key="label.name"/> : ${name} </br>
         <fmt:message key="label.cost"/>: ${cost}$</br>
         <fmt:message key="label.description"/>: ${description}</br>
         <fmt:message key="label.address"/>: ${address}</br>

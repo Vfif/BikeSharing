@@ -19,10 +19,11 @@ public class RentService {
     private static Logger Logger = LogManager.getLogger();
     private static RentService instance;
 
-    private RentService(){}
+    private RentService() {
+    }
 
-    public static RentService getInstance(){
-        if(instance == null){
+    public static RentService getInstance() {
+        if (instance == null) {
             instance = new RentService();
         }
         return instance;

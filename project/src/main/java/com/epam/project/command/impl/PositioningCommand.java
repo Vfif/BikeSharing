@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.Random;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class PositioningCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
@@ -42,7 +42,7 @@ public class PositioningCommand implements ActionCommand {
             request.setAttribute(ADDRESS, bike.getAddress());
             request.setAttribute(IMAGE, UPLOAD_DIR + File.separator + bike.getImage());
 
-        }else{
+        } else {
             router.setPage(ConfigurationManager.getProperty("path.page.noFreeBikes"));
         }
         return router;

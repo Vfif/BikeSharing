@@ -11,10 +11,11 @@ public class SaveUserStatusService {
     private static Logger Logger = LogManager.getLogger();
     private static SaveUserStatusService instance;
 
-    private SaveUserStatusService(){}
+    private SaveUserStatusService() {
+    }
 
-    public static SaveUserStatusService getInstance(){
-        if(instance == null){
+    public static SaveUserStatusService getInstance() {
+        if (instance == null) {
             instance = new SaveUserStatusService();
         }
         return instance;

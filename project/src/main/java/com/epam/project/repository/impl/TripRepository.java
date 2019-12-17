@@ -16,12 +16,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class TripRepository implements AbstractRepository<Trip> {
-    private static org.apache.logging.log4j.Logger Logger = LogManager.getLogger();
     private static final TripRepository instance = new TripRepository();
     private static final String INSERT = "INSERT INTO trip (money, user_id, bike_id, time) VALUES (?,?,?,?)";
+    private static org.apache.logging.log4j.Logger Logger = LogManager.getLogger();
+    private static final String TRIP = "trip.";
 
     private TripRepository() {
     }
@@ -59,11 +60,11 @@ public class TripRepository implements AbstractRepository<Trip> {
                 Trip trip = new Trip();
                 trip.setMark(resultSet.getInt(MARK));
                 trip.setUserId(resultSet.getInt(USER_ID));
-                trip.setBikeId(resultSet.getInt("trip."+BIKE_ID));
+                trip.setBikeId(resultSet.getInt(TRIP + BIKE_ID));
                 trip.setMoney(resultSet.getDouble(MONEY));
-                trip.setTime(new Date(resultSet.getLong("trip."+TIME)));
-                trip.setId(resultSet.getInt("trip."+ID));
-                trip.setBikeName(resultSet.getString("bike.name"));
+                trip.setTime(new Date(resultSet.getLong(TRIP + TIME)));
+                trip.setId(resultSet.getInt(TRIP + ID));
+                trip.setBikeName(resultSet.getString(BIKE + "." + NAME));
                 tripList.add(trip);
             }
         } catch (SQLException | ConnectionPoolException e) {

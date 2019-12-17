@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 import static com.epam.project.type.PageChangeType.FORWARD;
 import static com.epam.project.type.PageChangeType.REDIRECT;
 
@@ -66,12 +66,7 @@ public class AddBikeCommand implements ActionCommand {
                 Logger.error(e);
             }
 
-            Bike bike = new Bike();
-            bike.setName(name);
-            bike.setCost(Double.parseDouble(cost));
-            bike.setDescription(description);
-            bike.setAddress(address);
-            bike.setImage(imagePath);
+            Bike bike = new Bike(name, Double.parseDouble(cost), address, description, imagePath);
 
             try {
                 BikeRepository.getInstance().save(bike);

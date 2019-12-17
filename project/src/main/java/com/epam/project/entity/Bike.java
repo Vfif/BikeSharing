@@ -14,16 +14,24 @@ public class Bike extends Entity {
     public Bike() {
     }
 
+    public Bike(int location) {
+        this.location = location;
+    }
+
+    public Bike(String name, double cost, String address , String description, String image) {
+        this.name = name;
+        this.cost = cost;
+        this.address = address;
+        this.description = description;
+        this.image = image;
+    }
+
     public boolean isStatus() {
         return status;
     }
 
     public void setStatus(boolean status) {
         this.status = status;
-    }
-
-    public Bike(int location) {
-        this.location = location;
     }
 
     public String getAddress() {
@@ -93,7 +101,7 @@ public class Bike extends Entity {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o.getClass() != Bike.class) return false;
+        if (o == null || o.getClass() != Bike.class) return false;
 
         Bike bike = (Bike) o;
 

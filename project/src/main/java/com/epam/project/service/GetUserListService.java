@@ -14,10 +14,11 @@ public class GetUserListService {
     private static Logger Logger = LogManager.getLogger();
     private static GetUserListService instance;
 
-    private GetUserListService(){}
+    private GetUserListService() {
+    }
 
-    public static GetUserListService getInstance(){
-        if(instance == null){
+    public static GetUserListService getInstance() {
+        if (instance == null) {
             instance = new GetUserListService();
         }
         return instance;

@@ -11,11 +11,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 import java.util.Map;
 
-import static com.epam.project.command.ParameterName.BIKE;
-import static com.epam.project.command.ParameterName.BIKES;
+import static com.epam.project.type.ParameterName.BIKE;
 import static com.epam.project.type.PageChangeType.FORWARD;
 
 @SuppressWarnings("unchecked")

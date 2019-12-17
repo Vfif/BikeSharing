@@ -12,24 +12,25 @@ import java.util.List;
 
 public class HistoryService {
     private static Logger Logger = LogManager.getLogger();
-        private static HistoryService instance;
+    private static HistoryService instance;
 
-        private HistoryService(){}
+    private HistoryService() {
+    }
 
-        public static HistoryService getInstance(){
-            if(instance == null){
-                instance = new HistoryService();
-            }
-            return instance;
+    public static HistoryService getInstance() {
+        if (instance == null) {
+            instance = new HistoryService();
         }
+        return instance;
+    }
 
-        public List<Trip> findTrips(String login) throws ServiceException {
-            try {
-                return TripRepository.getInstance()
-                        .query(new TripSelectAllByUserIdSpecification(login));
-            } catch (RepositoryException e) {
-                Logger.error(e);
-                throw new ServiceException(e);
-            }
+    public List<Trip> findTrips(String login) throws ServiceException {
+        try {
+            return TripRepository.getInstance()
+                    .query(new TripSelectAllByUserIdSpecification(login));
+        } catch (RepositoryException e) {
+            Logger.error(e);
+            throw new ServiceException(e);
         }
+    }
 }

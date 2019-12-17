@@ -12,16 +12,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class RegistrationService {
     private static Logger Logger = LogManager.getLogger();
     private static RegistrationService instance;
 
-    private RegistrationService(){}
+    private RegistrationService() {
+    }
 
-    public static RegistrationService getInstance(){
-        if(instance == null){
+    public static RegistrationService getInstance() {
+        if (instance == null) {
             instance = new RegistrationService();
         }
         return instance;
@@ -29,7 +30,7 @@ public class RegistrationService {
 
     public Map<String, Boolean> checkRegistrationForm(String login, String password, String email) {
         boolean incorrectLogin = !RegistrationValidation.getInstance().isCorrectLogin(login)
-        | RegistrationService.getInstance().isClientWithLoginExist(login);
+                | RegistrationService.getInstance().isClientWithLoginExist(login);
         boolean incorrectPassword = !RegistrationValidation.getInstance().isCorrectPassword(password);
         boolean incorrectEmail = !RegistrationValidation.getInstance().isCorrectEmail(email);
         Map<String, Boolean> map = new HashMap<>();

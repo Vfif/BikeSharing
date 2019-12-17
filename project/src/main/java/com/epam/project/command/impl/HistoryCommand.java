@@ -14,8 +14,8 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.LOGIN;
-import static com.epam.project.command.ParameterName.TRIPS;
+import static com.epam.project.type.ParameterName.LOGIN;
+import static com.epam.project.type.ParameterName.TRIPS;
 
 public class HistoryCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();

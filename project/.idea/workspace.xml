@@ -57,7 +57,7 @@
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="bike_sharing: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="trip: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="client: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -70,95 +70,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/AddBikeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="40" column="5" selection-start-line="13" selection-start-column="3" selection-end-line="40" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/DeleteBikeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/GetBikeListService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/GetUserListService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/ModifyBikeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/PayService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/PositioningService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/PayCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/AbstractRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="39" column="27" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="27" />
+            <state relative-caret-position="261">
+              <caret line="65" column="57" lean-forward="true" selection-start-line="65" selection-start-column="57" selection-end-line="65" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/HistoryService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/ActionCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="377">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/LoginService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/ActionFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/Specification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="13" column="3" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="13" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/QuerySpecification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/resource/DatabaseManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/exception/PropertiesFileNotFoundException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/connection/ProxyConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/UpdateSpecification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -178,13 +166,12 @@
         <option value="jsf" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ProxyConnection</find>
-      <find>closeConnection</find>
       <find>name</find>
       <find>@Override</find>
       <find>SELECT_ALL</find>
@@ -213,62 +200,64 @@
       <find>rentTime</find>
       <find>trip</find>
       <find>text</find>
+      <find>org.testng.annotations.</find>
+      <find>Client</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/replenishment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/validation/AddBikeValidation.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/addBike.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/modifyBike.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/banUser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/deleteBike.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/changeBike.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/tripList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/pagecontent_ru_RU.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/pagecontent.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/pagecontent_en_US.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/pagecontent_ru_RU.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/TripRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/trip/TripUpdateMarkByIdSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/HistoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/trip/TripSelectByBikeIdAndTimeSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/trip/TripSelectAllByUserIdSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/first.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/user.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/entity/Bike.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/BikeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/PositioningService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateStatusSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeDeleteSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/admin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/GetBikeListService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/SaveBikeStatusCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/DeleteBikeService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/noFreeBikes.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/type/CommandType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/DeleteBikeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/ParameterName.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/changeBike.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/deleteBike.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/GetBikeListCommand.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ca5e3334-aee3-4042-bf5e-a7f0f29c4df9/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectAllSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectByIdNotRentSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectByIdSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectFreeSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateAddressSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateCostSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateDeleteSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateRentTimeSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateDescriptionSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateTimeSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/addBike.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateNameSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/ChangeBikeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/ModifyBikeService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin/modifyBike.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/ModifyBikeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/project/target/classes/log4j2.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/GoToCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/LoginCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/PayCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/RentCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/PositioningCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/ReplenishmentCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/ClientRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/TripRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/resource/ConfigurationManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/HistoryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/GetUserListService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/PayService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/RateService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/RegistrationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/SaveUserStatusService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/service/RentService.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/connection/ConnectionPoolTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/validation/LoginValidationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/validation/RegistrationValidationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/validation/AddBikeValidationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/resource/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/repository/impl/ClientRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/entity/Bike.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/AddBikeCommand.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/repository/impl/BikeRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/CardRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/repository/impl/CardRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/epam/project/repository/impl/TripRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/database/database.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/Specification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/QuerySpecification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/UpdateSpecification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/repository/AbstractRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/ActionCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/project/command/ActionFactory.java" />
       </list>
     </option>
   </component>
@@ -307,6 +296,7 @@
     </navigator>
     <panes>
       <pane id="Course" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -367,6 +357,43 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="specification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -374,6 +401,55 @@
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="type" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource Bundle 'pagecontent'" type="a6c14932:ResourceBundleNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -382,7 +458,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -392,7 +468,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,8 +476,10 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../untitled" />
+    <property name="last_opened_file_path" value="D:/intellij-javadocs/intellij-javadocs/lib/intellij-javadocs.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -410,10 +487,18 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.45886442" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2679803" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.epam.project.repository.impl" />
+      <recent name="com.epam.project.validation" />
+      <recent name="com.epam.project.connection" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Home\IdeaProjects\JavaWeb\project\src\main\java\com\epam\project\filter" />
       <recent name="C:\Users\Home\IdeaProjects\JavaWeb\project\target\project\WEB-INF" />
@@ -452,16 +537,89 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.27">
-    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.epam.project.command.impl.A" />
+  <component name="RunManager" selected="TestNG.CardRepositoryTest">
+    <configuration name="AddBikeValidationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.project.command.impl.AddBikeCommand" />
+          <option name="PATTERN" value="com.epam.project.validation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.epam.project.validation" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.project.validation.AddBikeValidationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BikeRepositoryTest.saveAndFindBikeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.project.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.project.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.project.repository.impl.BikeRepositoryTest" />
+      <option name="METHOD_NAME" value="saveAndFindBikeTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardRepositoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.project.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.project.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.project.repository.impl.CardRepositoryTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientRepositoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.project.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.project.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.project.repository.impl.ClientRepositoryTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationValidationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.project.validation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.project.validation" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.project.validation.RegistrationValidationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -540,12 +698,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.A" />
+      <item itemvalue="TestNG.RegistrationValidationTest" />
+      <item itemvalue="TestNG.AddBikeValidationTest" />
+      <item itemvalue="TestNG.ClientRepositoryTest" />
+      <item itemvalue="TestNG.BikeRepositoryTest.saveAndFindBikeTest" />
+      <item itemvalue="TestNG.CardRepositoryTest" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.27" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.A" />
+        <item itemvalue="TestNG.CardRepositoryTest" />
+        <item itemvalue="TestNG.BikeRepositoryTest.saveAndFindBikeTest" />
+        <item itemvalue="TestNG.ClientRepositoryTest" />
+        <item itemvalue="TestNG.AddBikeValidationTest" />
+        <item itemvalue="TestNG.RegistrationValidationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -599,12 +765,45 @@
       <workItem from="1576327011919" duration="1836000" />
       <workItem from="1576329583645" duration="279000" />
       <workItem from="1576345629950" duration="1369000" />
-      <workItem from="1576426276880" duration="1589000" />
+      <workItem from="1576426276880" duration="28001000" />
+      <workItem from="1576608972312" duration="7535000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="RegistrationValidationTest_isCorrectLoginTest - 2019.12.17 at 18h 49m 14s.xml">
+      <configuration name="RegistrationValidationTest.isCorrectLoginTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RegistrationValidationTest_getInstanceTest - 2019.12.17 at 18h 51m 57s.xml">
+      <configuration name="RegistrationValidationTest.getInstanceTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RegistrationValidationTest - 2019.12.17 at 18h 56m 36s.xml">
+      <configuration name="RegistrationValidationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RegistrationValidationTest - 2019.12.17 at 18h 57m 18s.xml">
+      <configuration name="RegistrationValidationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddBikeValidationTest - 2019.12.17 at 19h 10m 37s.xml">
+      <configuration name="AddBikeValidationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AddBikeValidationTest - 2019.12.17 at 19h 11m 27s.xml">
+      <configuration name="AddBikeValidationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ClientRepositoryTest - 2019.12.17 at 19h 48m 51s.xml">
+      <configuration name="ClientRepositoryTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ClientRepositoryTest - 2019.12.17 at 20h 00m 13s.xml">
+      <configuration name="ClientRepositoryTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BikeRepositoryTest_saveAndFindBikeTest - 2019.12.17 at 20h 16m 48s.xml">
+      <configuration name="BikeRepositoryTest.saveAndFindBikeTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CardRepositoryTest - 2019.12.17 at 20h 42m 22s.xml">
+      <configuration name="CardRepositoryTest" configurationId="TestNG" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="602072000" />
+    <option name="totallyTimeSpent" value="636019000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,7 +818,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49346405" visible="true" weight="0.19062027" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49346405" visible="true" weight="0.22163388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -631,7 +830,50 @@
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49924356" weight="0.32843137" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.3006536" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.25490198" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4117647" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32843137" />
+      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32843137" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32843137" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.17810458" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32843137" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32843137" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="bottom" id="Spring" order="17" />
+      <window_info anchor="bottom" id="Duplicates" order="18" weight="0.32843137" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="JSF" order="1" weight="0.32980332" />
+      <window_info anchor="right" id="CDI" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.32980332" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="11" weight="0.19591528" />
+      <window_info anchor="right" id="Ant Build" order="12" weight="0.24962178" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49346405" visible="true" weight="0.22163388" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50816995" side_tool="true" weight="0.22087745" />
+      <window_info id="JavaEE:App" order="7" sideWeight="0.50653595" side_tool="true" weight="0.28214827" />
+      <window_info id="Web" order="8" sideWeight="0.502451" side_tool="true" weight="0.2624811" />
+      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49924356" weight="0.32843137" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32843137" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.25490198" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4117647" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -656,53 +898,10 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Ant Build" order="9" weight="0.24962178" />
-      <window_info anchor="right" id="Database" order="10" weight="0.19440243" />
-      <window_info anchor="right" id="Maven" order="11" weight="0.32980332" />
-      <window_info anchor="right" id="Bean Validation" order="12" weight="0.32980332" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49346405" visible="true" weight="0.28214827" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50816995" side_tool="true" weight="0.22087745" />
-      <window_info id="JavaEE:App" order="7" sideWeight="0.50653595" side_tool="true" weight="0.28214827" />
-      <window_info id="Web" order="8" sideWeight="0.502451" side_tool="true" weight="0.2624811" />
-      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49924356" weight="0.32843137" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.3006536" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.44117647" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32843137" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32843137" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32843137" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.18300654" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32843137" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32843137" />
-      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="16" />
-      <window_info anchor="bottom" id="Spring" order="17" />
-      <window_info anchor="bottom" id="Duplicates" order="18" weight="0.32843137" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32980332" />
-      <window_info anchor="right" id="JSF" order="1" weight="0.32980332" />
-      <window_info anchor="right" id="CDI" order="2" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Ant Build" order="9" weight="0.24962178" />
-      <window_info anchor="right" id="Database" order="10" weight="0.19440243" />
-      <window_info anchor="right" id="Maven" order="11" weight="0.32980332" />
-      <window_info anchor="right" id="Bean Validation" order="12" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.32980332" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="11" weight="0.19591528" />
+      <window_info anchor="right" id="Ant Build" order="12" weight="0.24962178" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,25 +940,11 @@
           <properties />
           <option name="timeStamp" value="173" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/DeleteBikeCommand.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/GoToCommand.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="(request.getSession().getAttribute(&quot;bike&quot;))" language="JAVA" />
-        <watch expression="request.getSession().getAttribute(&quot;bikes&quot;)" language="JAVA" />
-        <watch expression="((java.util.ArrayList)request.getSession().getAttribute(BIKES)).get(2)" custom="java.util.ArrayList" />
+        <watch expression="Pattern.matches(EMAIL_REG, email)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -775,6 +960,16 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>Pattern.matches(EMAIL_REG, email)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(COMMAND)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>request.getSession().getAttribute(&quot;bikes&quot;)</expression-string>
         <language-id>JAVA</language-id>
@@ -815,399 +1010,394 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>request.getParameter(&quot;bike_id&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>request.getParameter(&quot;bike&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/load.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/noFreeBikes.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/rent.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/replenishment.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/DeleteBikeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#700#730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/ActionCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/GetBikeListCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/banUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="35" column="75" lean-forward="true" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/tripList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/changeBike.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/deleteBike.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ca5e3334-aee3-4042-bf5e-a7f0f29c4df9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectByIdSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateAddressSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateTimeSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectAllSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectByIdNotRentSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectFreeSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/button.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/validation/RegistrationValidationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="27" />
+          <caret line="9" selection-start-line="9" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/addBike.jsp">
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/validation/LoginValidationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
+        <state relative-caret-position="408">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/validation/AddBikeValidation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/connection/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/validation/AddBikeValidationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/type/ClientType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/first.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/connection/ConnectionPoolTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="52" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="213">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="52" />
           <folding>
-            <element signature="n#style#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/error.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeSelectAllSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/client/ClientSelectAllSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/entity/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/AddBikeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="68" column="98" selection-start-line="68" selection-start-column="98" selection-end-line="68" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/entity/Bike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateDeleteSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateCostSpecification.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateTimeSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateNameSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateDescriptionSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateNameSpecification.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateCostSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="das://ca5e3334-aee3-4042-bf5e-a7f0f29c4df9/schema/bike_sharing/table/bike">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f116370e-5235-4cf6-9859-102b9cf68365">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/controller/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/repository/impl/ClientRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="373">
+          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/modifyBike.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/ModifyBikeCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/TripRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/bike/BikeUpdateAddressSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/BikeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/repository/impl/BikeRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/CardRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="15" selection-start-line="13" selection-start-column="7" selection-end-line="15" selection-end-column="15" />
+        <state relative-caret-position="238">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/target/classes/log4j2.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/card/CardUpdateCashSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="76" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="76" />
+        <state relative-caret-position="170">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/GetUserListCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/card/CardSelectByNumberCashSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+        <state relative-caret-position="306">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/SaveUserStatusCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/impl/ClientRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/ParameterName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/LogoutCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/ChangeBikeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" selection-start-line="16" selection-end-line="17" />
+        <state relative-caret-position="331">
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#2039#2040#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/AddBikeCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/entity/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="16" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/GoToCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/repository/impl/CardRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/epam/project/repository/impl/TripRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/database/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/8.0/javaee-api-8.0.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/8.0/javaee-api-8.0.jar!/javax/servlet/http/HttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/lang/NullPointerException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/AddBikeService.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="40" column="5" selection-start-line="13" selection-start-column="3" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="369">
+          <caret line="163" column="24" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/DeleteBikeService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/resource/ConfigurationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/lang/Throwable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/lang/Integer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/lang/Comparable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/lang/Number.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/resource/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/exception/PropertiesFileNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/sql/Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/connection/ProxyConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/GetBikeListService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/Specification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/QuerySpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/specification/UpdateSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/ActionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/GetUserListService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/ActionCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="377">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/ModifyBikeService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/repository/AbstractRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/PayService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/HistoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/service/PositioningService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/project/command/impl/PayCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="27" />
+        <state relative-caret-position="261">
+          <caret line="65" column="57" lean-forward="true" selection-start-line="65" selection-start-column="57" selection-end-line="65" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1288,7 +1478,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.google.protobuf:protobuf-java:3.6.1</last-edited>
+          <last-edited>commons-beanutils-1.8.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

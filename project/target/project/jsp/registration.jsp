@@ -5,14 +5,14 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head>
-    <title>Title</title>
+    <title><fmt:message key="title.registration"/></title>
     <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
 
 </head>
 <body>
 <form class="form-3" action="${pageContext.request.contextPath}/controller" method="post">
-    <label for="login"><fmt:message key="label.login"/>:</label>
-        <input type="text" name="login" id="login" pattern="[A-Za-zА-Яа-я\d]{0,45}"
+    <label for="login"><fmt:message key="label.login"/>*:</label>
+        <input type="text" name="login" id="login" pattern="[A-Za-zА-Яа-я\d\-\_]{0,45}"
                maxlength="45"
                title="<fmt:message key="invalid.login"/>" required/>
 
@@ -20,7 +20,7 @@
             <label><fmt:message key="invalid.registration.login"/></label>
         </c:if>
 
-    <label for="password"><fmt:message key="label.password"/>:</label>
+    <label for="password"><fmt:message key="label.password"/>*:</label>
         <input type="text" name="password" id="password"
                pattern="(?=.*[A-ZА-Я])(?=.*[a-zа-я])(?=.*\d)([A-Za-zА-Яа-я\d]{8,45})"
                maxlength="45"
@@ -32,9 +32,9 @@
     </c:if>
 
 
-    <label for="email"><fmt:message key="label.email"/>:</label>
+    <label for="email"><fmt:message key="label.email"/>*:</label>
         <input type="text" name="email" id="email"
-               pattern="^\w{6,}@[a-z]+\.[a-z]{2,4}$"
+               pattern="^[A-Za-z\d\_]{6,}@[a-z]+\.[a-z]{2,4}$"
                maxlength="45"
                title = "<fmt:message key="invalid.registration.email"/>"
                required/>

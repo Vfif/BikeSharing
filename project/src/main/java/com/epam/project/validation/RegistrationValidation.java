@@ -3,9 +3,9 @@ package com.epam.project.validation;
 import java.util.regex.Pattern;
 
 public class RegistrationValidation {
-    private static final String LOGIN_REG = "[A-Za-zА-Яа-я\\d]{1,45}";
+    private static final String LOGIN_REG = "[A-Za-zА-Яа-я\\d\\-\\_]{1,45}";
     private static final String PASSWORD_REG = "^(?=.*[A-ZА-Я])(?=.*[a-zа-я])(?=.*\\d)[A-Za-zА-Яа-я\\d]{8,45}$";
-    private static final String EMAIL_REG = "^\\w{6,}@\\w+\\.\\p{Lower}{2,4}$";
+    private static final String EMAIL_REG = "^[A-Za-z\\d_]{6,}@[a-z]+\\.[a-z]{2,4}$";
     private static RegistrationValidation instance;
 
     private RegistrationValidation() {

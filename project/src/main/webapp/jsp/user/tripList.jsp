@@ -6,7 +6,7 @@
 <fmt:setBundle basename="pagecontent"/>
 <html>
 <head>
-    <title>Title</title>
+    <title><fmt:message key="button.history"/></title>
     <link href="${pageContext.request.contextPath}/css/banUser.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/button.css" rel="stylesheet"/>
 </head>
@@ -14,10 +14,10 @@
 
 <table style="width: auto">
     <tr>
-        <th>Bike</th>
-        <th>Date</th>
-        <th>Payment($)</th>
-        <th>Mark</th>
+        <th><fmt:message key="label.bike"/></th>
+        <th><fmt:message key="label.date"/></th>
+        <th><fmt:message key="label.payment"/>($)</th>
+        <th><fmt:message key="label.mark"/></th>
     </tr>
     <c:forEach items="${trips}" var="trip">
     <tr>

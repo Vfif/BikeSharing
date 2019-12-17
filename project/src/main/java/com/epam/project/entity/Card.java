@@ -23,7 +23,7 @@ public class Card extends Entity{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o.getClass() != Card.class) return false;
+        if (o == null || o.getClass() != Card.class) return false;
 
         Card card = (Card) o;
 

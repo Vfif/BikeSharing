@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 
 public class RentCommand implements ActionCommand {
     private static Logger Logger = LogManager.getLogger();
@@ -29,9 +29,9 @@ public class RentCommand implements ActionCommand {
             if (RentService.getInstance().isBikeFreeById(bikeId) &&
                     RentService.getInstance().isClientNotBan(login)) {
                 router.setPage(ConfigurationManager.getProperty("path.page.rent"));
-                RentService.getInstance().updateUserByBikeId(login, bikeId); //client -> bikeId
                 long time = new Date().getTime();
-                RentService.getInstance().updateBikeRentTime(bikeId, time);//bike -> rentTime
+                RentService.getInstance().updateUserByBikeId(login, bikeId);
+                RentService.getInstance().updateBikeRentTime(bikeId, time);
                 request.getSession().setAttribute(TIME, time);
             } else {
                 router.setPage(ConfigurationManager.getProperty("path.page.end"));

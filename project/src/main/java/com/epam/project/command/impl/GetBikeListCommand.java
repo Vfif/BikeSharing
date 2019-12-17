@@ -13,8 +13,8 @@ import org.apache.logging.log4j.LogManager;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.BIKES;
-import static com.epam.project.command.ParameterName.PAGE;
+import static com.epam.project.type.ParameterName.BIKES;
+import static com.epam.project.type.ParameterName.PAGE;
 
 public class GetBikeListCommand implements ActionCommand {
     private static org.apache.logging.log4j.Logger Logger = LogManager.getLogger();

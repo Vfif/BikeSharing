@@ -4,7 +4,7 @@
 <fmt:setLocale value="${locale}"/>
 <fmt:setBundle basename="pagecontent"/>
 <html>
-<head><title>Error Page</title></head>
+<head><title>Error</title></head>
 <link href="${pageContext.request.contextPath}/css/button.css" rel="stylesheet"/>
 <body>
 Request from ${pageContext.errorData.requestURI} is failed
@@ -15,7 +15,7 @@ Status code: ${pageContext.errorData.statusCode}
 <br/>
 Exception: ${pageContext.errorData.throwable}
 <br/>
-Exception: ${error}
+${error}
 <br/>
 <form  method="POST" action="${pageContext.request.contextPath}/controller">
     <input type="hidden" name="command" value="logout"/>

@@ -14,8 +14,8 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.BIKES;
-import static com.epam.project.command.ParameterName.BIKE_ID;
+import static com.epam.project.type.ParameterName.BIKES;
+import static com.epam.project.type.ParameterName.BIKE_ID;
 
 @SuppressWarnings("unchecked")
 public class DeleteBikeCommand implements ActionCommand {

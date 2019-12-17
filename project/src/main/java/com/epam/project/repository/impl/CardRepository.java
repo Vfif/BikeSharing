@@ -16,8 +16,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.epam.project.command.ParameterName.CASH;
-import static com.epam.project.command.ParameterName.NUMBER;
+import static com.epam.project.type.ParameterName.CASH;
+import static com.epam.project.type.ParameterName.NUMBER;
 
 public class CardRepository implements AbstractRepository<Card> {
     private static Logger Logger = LogManager.getLogger();

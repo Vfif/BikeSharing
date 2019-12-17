@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
-import static com.epam.project.command.ParameterName.*;
+import static com.epam.project.type.ParameterName.*;
 import static com.epam.project.type.PageChangeType.FORWARD;
 import static com.epam.project.type.PageChangeType.REDIRECT;
 
